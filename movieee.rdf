@@ -1,0 +1,1061 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23/"
+     xml:base="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sko="http://snomed.info/sct/9000000000002070081231"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:agro="http://schema.org/"
+     xmlns:foaf="http://purl.uniprot.org/core/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:dcterms="http://purl.allotrope.org/voc/afo/merged/REC/2026/03/merged-without-qudt-and-inferred"
+     xmlns:untitled-ontology-23="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference"/>
+        <rdfs:range rdf:resource="http://schema.org/Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/actor -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/actor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#actedIn"/>
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor"/>
+        <rdfs:comment>link a movie to its actor</rdfs:comment>
+        <rdfs:label>actor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/author -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/author">
+        <rdfs:domain rdf:resource="http://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/creator -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/creator">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ScreenWriter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/director -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/director">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#directedBy"/>
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/159073004"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/itemListElement -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/itemListElement">
+        <rdfs:domain rdf:resource="http://schema.org/Recommendation"/>
+        <rdfs:range rdf:resource="http://schema.org/Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/producer -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/producer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#producedBy"/>
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/review -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/review">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#reviewOf"/>
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://schema.org/Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/reviewRating -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/reviewRating">
+        <rdfs:domain rdf:resource="http://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RatingHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#actedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#actedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor"/>
+        <rdfs:range rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>Represent movie in which an actor has acted</rdfs:comment>
+        <rdfs:label>acted in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#directedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#directedBy">
+        <rdfs:domain rdf:resource="http://snomed.info/id/159073004"/>
+        <rdfs:range rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>represent movie directed by director</rdfs:comment>
+        <rdfs:label>Directed By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#hasPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+        <rdfs:comment>Relationship between series and its episodes</rdfs:comment>
+        <rdfs:label>haspart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+        <rdfs:comment>show membership of an episode in a series</rdfs:comment>
+        <rdfs:label>ispartof</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#producedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#producedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Producer"/>
+        <rdfs:range rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>represent movie produced by producer</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#reviewOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#reviewOf">
+        <rdfs:domain rdf:resource="http://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>represent movie associated with review</rdfs:comment>
+        <rdfs:label>review of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActorPrefernce"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:domain rdf:resource="http://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <owl:equivalentProperty rdf:resource="http://schema.org/name"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/contentRating -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/contentRating">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>specifies audience suitability rationg of a movie</rdfs:comment>
+        <rdfs:label>content rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/created -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/created">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/dateCreated -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/dateCreated">
+        <rdfs:domain rdf:resource="http://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/datePublished -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/datePublished">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>represent release date</rdfs:comment>
+        <rdfs:label>date published</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/duration -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/duration">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>specifies running time of movie</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>represent electronic mail address of user</rdfs:comment>
+        <rdfs:label>email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/episodeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/episodeNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>represnet sequence number of an episode</rdfs:comment>
+        <rdfs:label>episdoe number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/gender -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/gender">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/givenName -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/givenName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Represent first name of a person</rdfs:comment>
+        <rdfs:label>given name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/inLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/inLanguage">
+        <rdfs:domain rdf:resource="http://schema.org/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/modified -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/modified">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/nationality">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>represent nationality of a person</rdfs:comment>
+        <rdfs:label>nationality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/noOfEpisodes -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/noOfEpisodes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/numberOfSeasons -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/numberOfSeasons">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/ratingValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Review"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RatingHistory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>represent numerical rating assigned to a review or movie</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/reviewBody -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/reviewBody">
+        <rdfs:domain rdf:resource="http://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>represent textual content of a review</rdfs:comment>
+        <rdfs:label>review body</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/Movie -->
+
+    <owl:Class rdf:about="http://schema.org/Movie">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/director"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/159073004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/actor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/duration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A film or video content users can watch</rdfs:comment>
+        <rdfs:label>Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://schema.org/Recommendation -->
+
+    <owl:Class rdf:about="http://schema.org/Recommendation">
+        <rdfs:comment>A list of suggested movies for users</rdfs:comment>
+        <rdfs:label>Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Review -->
+
+    <owl:Class rdf:about="http://schema.org/Review">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/author"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>User feedback about a movie</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/159073004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/159073004">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A person who direct movie</rdfs:comment>
+        <rdfs:label>Director</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActionMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActionMovie">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>A movie containing action based scene</rdfs:comment>
+        <rdfs:label>Action Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/givenName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A person who perform role in movie</rdfs:comment>
+        <rdfs:label>Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActorPrefernce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActorPrefernce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference"/>
+        <rdfs:comment>Preference based on actor</rdfs:comment>
+        <rdfs:label>Actor preference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ComedyMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ComedyMovie">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>A movie design to entertain and make people laugh</rdfs:comment>
+        <rdfs:label>Comedy Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Movie"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A single part of film series</rdfs:comment>
+        <rdfs:label>Episode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Movie"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A collection of Episodes</rdfs:comment>
+        <rdfs:label>Film Series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#GuestUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#GuestUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#PremiumUser"/>
+        <rdfs:comment>A user who access system without registration</rdfs:comment>
+        <rdfs:label>Guest user</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HorrorMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HorrorMovie">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>A movie intended to scare or create fear</rdfs:comment>
+        <rdfs:label>Horror Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference"/>
+        <rdfs:comment>Preference based on language</rdfs:comment>
+        <rdfs:label>Languange preference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference">
+        <rdfs:comment>User&apos;s choice or interest</rdfs:comment>
+        <rdfs:label>Preference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#PremiumUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#PremiumUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RegisteredUser"/>
+        <rdfs:comment>A user with special subscription access</rdfs:comment>
+        <rdfs:label>Preium User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Producer">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A person who finances or produces movie</rdfs:comment>
+        <rdfs:label>Producer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RatingHistory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RatingHistory">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Review"/>
+        <rdfs:comment>Store rating value given by user</rdfs:comment>
+        <rdfs:label>Rating history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RegisteredUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RegisteredUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+        <rdfs:comment>A user who has created an account</rdfs:comment>
+        <rdfs:label>Registered User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ReviewComment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ReviewComment">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Review"/>
+        <rdfs:comment>textual comment written in a review</rdfs:comment>
+        <rdfs:label>Review comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RomanticMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RomanticMovie">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Movie"/>
+        <rdfs:comment>A movie based on Love and emotional relationship</rdfs:comment>
+        <rdfs:label>Romantic Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ScreenWriter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ScreenWriter">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A person who write movie scripts</rdfs:comment>
+        <rdfs:label>Screenwriter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/email"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/givenName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A person who interact with system</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#UserFeedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#UserFeedback">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Review"/>
+        <rdfs:comment>Feedback given byt user about a movie</rdfs:comment>
+        <rdfs:label>User feedback</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory">
+        <rdfs:comment>Records of movies watched by user</rdfs:comment>
+        <rdfs:label>Watchhistory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#AoranHardie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#AoranHardie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ScreenWriter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#BreakingBadSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#BreakingBadSeries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Comment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Comment1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ReviewComment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Conjouring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Conjouring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HorrorMovie"/>
+        <terms:title>The Conjouring</terms:title>
+        <agro:datePublished rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">2017-05-02</agro:datePublished>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#CristopherNolan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#CristopherNolan">
+        <rdf:type rdf:resource="http://snomed.info/id/159073004"/>
+        <agro:givenName>Cristopher</agro:givenName>
+        <agro:nationality>British</agro:nationality>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#EnglishPreference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#EnglishPreference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Feedback1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Feedback1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#UserFeedback"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HindiPreference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HindiPreference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HomeAlone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#HomeAlone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ComedyMovie"/>
+        <terms:title>Home Alone</terms:title>
+        <agro:inLanguage>Engish</agro:inLanguage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Jerry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Jerry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#KeanuPreference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#KeanuPreference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActorPrefernce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LenardoDeCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LenardoDeCaprio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MissionImpossible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MissionImpossible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActionMovie"/>
+        <terms:language rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#EnglishPreference"/>
+        <agro:actor rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#TomCruise"/>
+        <agro:director rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#CristopherNolan"/>
+        <agro:producer rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Jerry"/>
+        <agro:review rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Review1"/>
+        <terms:title>Mission Impossible</terms:title>
+        <agro:duration rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">2h23mint</agro:duration>
+        <agro:inLanguage rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">English</agro:inLanguage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistEp1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistEp1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+        <untitled-ontology-23:isPartOf rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistSeries"/>
+        <terms:title>Money Heist</terms:title>
+        <agro:episodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</agro:episodeNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistEp2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistEp2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Episode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistSeries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#FilmSeries"/>
+        <untitled-ontology-23:hasPart rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MoneyHeistEp1"/>
+        <terms:title>Money Heist</terms:title>
+        <agro:noOfEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41</agro:noOfEpisodes>
+        <agro:numberOfSeasons rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</agro:numberOfSeasons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Movie1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Movie1">
+        <rdf:type rdf:resource="http://schema.org/Movie"/>
+        <terms:title>Generic Movie</terms:title>
+        <agro:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</agro:duration>
+        <agro:inLanguage>English</agro:inLanguage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Preference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Rating1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Rating1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RatingHistory"/>
+        <agro:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.8</agro:ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Rating2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Rating2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RatingHistory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Recommendation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Recommendation1">
+        <rdf:type rdf:resource="http://schema.org/Recommendation"/>
+        <agro:itemListElement rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#MissionImpossible"/>
+        <agro:itemListElement rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Titanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Recommendation2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Recommendation2">
+        <rdf:type rdf:resource="http://schema.org/Recommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Review1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Review1">
+        <rdf:type rdf:resource="http://schema.org/Review"/>
+        <agro:author rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User1"/>
+        <agro:reviewRating rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Rating1"/>
+        <agro:dateCreated rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-16T10:00:00</agro:dateCreated>
+        <agro:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.8</agro:ratingValue>
+        <agro:reviewBody>Excellent action movie</agro:reviewBody>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Review2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Review2">
+        <rdf:type rdf:resource="http://schema.org/Review"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Titanic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Titanic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#RomanticMovie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#TomCruise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#TomCruise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#Actor"/>
+        <agro:gender>Male</agro:gender>
+        <agro:givenName>Tom</agro:givenName>
+        <agro:nationality>American</agro:nationality>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#TomCruisePreference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#TomCruisePreference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#ActorPrefernce"/>
+        <skos:related rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#TomCruisePreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#UrduPreference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#UrduPreference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#LanguagePreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#User"/>
+        <agro:email>user@gmail.com</agro:email>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/good/ontologies/2026/3/untitled-ontology-23#WatchHistory"/>
+        <agro:dateCreated rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-10T10:00:00</agro:dateCreated>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
